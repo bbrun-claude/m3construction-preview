@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M3 Construction | R&eacute;novation &amp; Construction &agrave; Ramonville (31)</title>
+<meta name="description" content="M3 Construction, entreprise tous corps d'&eacute;tat &agrave; Ramonville-Saint-Agne. R&eacute;novation, charpente, couverture, extensions, r&eacute;paration sinistres. Depuis 2001 en Occitanie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --red:#9B1B30;
+  --red-dark:#7A1526;
+  --dark:#1A1A1E;
+  --grey:#3A3A3F;
+  --light:#F5F3F4;
+  --cream:#FAFAFA;
+}
+body{font-family:'Source Sans 3',sans-serif;color:var(--grey);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Sora',sans-serif;color:var(--dark)}
+img{max-width:100%;height:auto}
+a{text-decoration:none;color:inherit}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,26,30,0.95);backdrop-filter:blur(8px);padding:0.8rem 2rem;display:flex;align-items:center;justify-content:space-between}
+.nav img{height:50px}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.85);font-family:'Sora',sans-serif;font-size:0.9rem;transition:color 0.3s}
+.nav-links a:hover{color:var(--red)}
+.nav-cta{background:var(--red);color:#fff !important;padding:0.5rem 1.2rem;border-radius:4px;font-weight:600;transition:background 0.3s}
+.nav-cta:hover{background:var(--red-dark)}
+.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.menu-toggle span{width:24px;height:2px;background:#fff}
+
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--dark)}
+.hero-bg{position:absolute;inset:0;background:url('https://www.m3-construction.fr/content/galleries/c1.jpg') center/cover;opacity:0.3}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,26,30,0.9) 30%,rgba(155,27,48,0.3))}
+.hero-content{position:relative;z-index:2;max-width:700px;padding:2rem 4rem}
+.hero h1{color:#fff;font-size:3rem;font-weight:700;line-height:1.15;margin-bottom:1rem}
+.hero h1 span{color:var(--red)}
+.hero-sub{color:rgba(255,255,255,0.6);font-size:0.95rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem}
+.hero p{color:rgba(255,255,255,0.75);font-size:1.15rem;margin-bottom:2rem;max-width:550px}
+.btn{display:inline-block;padding:0.85rem 2rem;border-radius:4px;font-family:'Sora',sans-serif;font-weight:600;font-size:0.95rem;transition:all 0.3s}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-dark);transform:translateY(-2px)}
+.btn-outline{border:2px solid rgba(255,255,255,0.4);color:#fff;margin-left:1rem}
+.btn-outline:hover{background:rgba(255,255,255,0.08)}
+
+section{padding:5rem 2rem}
+.container{max-width:1100px;margin:0 auto}
+.section-title{text-align:center;margin-bottom:3rem}
+.section-title h2{font-size:2.2rem;margin-bottom:0.5rem}
+.section-title .accent{color:var(--red)}
+.section-title p{color:#777;font-size:1.05rem;max-width:550px;margin:0 auto}
+
+.about{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.about-img{border-radius:8px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.12)}
+.about-img img{width:100%;height:400px;object-fit:cover;display:block}
+.about-text h3{font-size:1.5rem;margin-bottom:1rem}
+.about-text p{margin-bottom:1rem;color:#555}
+.about-stats{display:flex;gap:2rem;margin-top:1.5rem}
+.stat{text-align:center}
+.stat-num{font-family:'Sora',sans-serif;font-size:2rem;font-weight:700;color:var(--red)}
+.stat-label{font-size:0.85rem;color:#777}
+
+.services{background:#fff}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.service-card{background:var(--light);border-radius:8px;overflow:hidden;display:grid;grid-template-columns:200px 1fr;transition:transform 0.3s,box-shadow 0.3s}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 35px rgba(0,0,0,0.08)}
+.service-card img{width:100%;height:100%;object-fit:cover;min-height:180px}
+.service-card-body{padding:1.5rem}
+.service-card h3{font-size:1.05rem;margin-bottom:0.5rem;color:var(--red)}
+.service-card p{font-size:0.9rem;color:#666;line-height:1.5}
+
+.gallery{background:var(--dark);color:#fff}
+.gallery .section-title h2{color:#fff}
+.gallery .section-title p{color:rgba(255,255,255,0.6)}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.gallery-item{border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
+.gallery-item:hover img{transform:scale(1.06)}
+
+.cta{background:linear-gradient(135deg,var(--red),var(--red-dark));text-align:center;color:#fff;padding:4rem 2rem}
+.cta h2{color:#fff;font-size:2rem;margin-bottom:0.8rem}
+.cta p{font-size:1.1rem;opacity:0.9;margin-bottom:2rem;max-width:550px;margin-left:auto;margin-right:auto}
+.btn-white{background:#fff;color:var(--red-dark)}
+.btn-white:hover{background:var(--cream);transform:translateY(-2px)}
+
+.contact{background:var(--cream)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.contact-info h3{font-size:1.4rem;margin-bottom:1.5rem}
+.contact-item{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.5rem}
+.contact-icon{width:44px;height:44px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-icon svg{width:20px;height:20px;fill:#fff}
+.contact-item h4{font-size:0.95rem;margin-bottom:0.2rem}
+.contact-item p{font-size:0.9rem;color:#666}
+.contact-map{border-radius:8px;overflow:hidden;height:100%;min-height:300px}
+.contact-map iframe{width:100%;height:100%;border:0}
+
+footer{background:var(--dark);color:rgba(255,255,255,0.6);text-align:center;padding:2rem}
+footer p{font-size:0.85rem}
+
+@media(max-width:768px){
+  .menu-toggle{display:flex}
+  .nav-links{position:fixed;top:0;right:-100%;width:70%;height:100vh;background:var(--dark);flex-direction:column;justify-content:center;padding:2rem;transition:right 0.3s}
+  .nav-links.active{right:0}
+  .hero-content{padding:2rem}
+  .hero h1{font-size:2rem}
+  .about-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .service-card{grid-template-columns:1fr}
+  .service-card img{height:200px}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .about-stats{flex-wrap:wrap}
+  .btn-outline{margin-left:0;margin-top:0.8rem}
+}
+@media(max-width:480px){.gallery-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#"><img src="https://www.m3-construction.fr/themes/default_3_columns/img/logo.png" alt="M3 Construction"></a>
+  <div class="nav-links" id="navLinks">
+    <a href="#about">L'entreprise</a>
+    <a href="#services">Nos m&eacute;tiers</a>
+    <a href="#gallery">R&eacute;alisations</a>
+    <a href="#contact" class="nav-cta">Contact</a>
+  </div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-sub">Tous corps d'&eacute;tat depuis 2001</p>
+    <h1>R&eacute;novation &amp; <span>Construction</span> en Occitanie</h1>
+    <p>Ma&ccedil;onnerie, charpente, couverture, extensions, r&eacute;novation int&eacute;rieure et r&eacute;paration apr&egrave;s sinistres. Une &eacute;quipe polyvalente au service de vos projets.</p>
+    <a href="#contact" class="btn btn-red">Devis gratuit</a>
+    <a href="#gallery" class="btn btn-outline">Nos chantiers</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="https://www.m3-construction.fr/modules/slideshow/images/1/slide-large.jpg" alt="R&eacute;alisation M3 Construction piscine">
+      </div>
+      <div class="about-text">
+        <h3>Une entreprise polyvalente et r&eacute;active</h3>
+        <p>Implant&eacute;e &agrave; Ramonville-Saint-Agne en Haute-Garonne, M3 Construction intervient depuis 2001 sur tous types de travaux du b&acirc;timent pour les particuliers et les professionnels.</p>
+        <p>Notre &eacute;quipe ma&icirc;trise l'ensemble des corps de m&eacute;tier : ma&ccedil;onnerie, menuiserie, peinture, charpente, couverture, zinguerie. Cette polyvalence nous permet d'assurer la coordination compl&egrave;te de vos chantiers, de la r&eacute;novation &agrave; la construction.</p>
+        <p>Nous intervenons &eacute;galement en urgence pour les r&eacute;parations apr&egrave;s sinistres : b&acirc;chage, &eacute;taiement, remise en &eacute;tat.</p>
+        <div class="about-stats">
+          <div class="stat"><div class="stat-num">25+</div><div class="stat-label">Ans d'exp&eacute;rience</div></div>
+          <div class="stat"><div class="stat-num">TCE</div><div class="stat-label">Tous corps d'&eacute;tat</div></div>
+          <div class="stat"><div class="stat-num">31</div><div class="stat-label">Haute-Garonne &amp; Occitanie</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Nos <span class="accent">m&eacute;tiers</span></h2>
+      <p>Des comp&eacute;tences compl&egrave;tes pour tous vos projets de construction et de r&eacute;novation</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://www.m3-construction.fr/content/galleries/r1.jpg" alt="R&eacute;novation">
+        <div class="service-card-body">
+          <h3>R&eacute;novation</h3>
+          <p>R&eacute;novation int&eacute;rieure et ext&eacute;rieure pour particuliers et professionnels. Ma&ccedil;onnerie, carrelage, peinture, menuiserie.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://www.m3-construction.fr/content/galleries/c1.jpg" alt="Charpente couverture">
+        <div class="service-card-body">
+          <h3>Charpente &amp; Couverture</h3>
+          <p>Pose et r&eacute;novation de charpentes, couvertures et zinguerie. Intervention sur b&acirc;timents anciens et patrimoniaux.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://www.m3-construction.fr/content/galleries/clerc%203ok.jpg" alt="Extension">
+        <div class="service-card-body">
+          <h3>Extensions &amp; Sur&eacute;l&eacute;vations</h3>
+          <p>Agrandissement de votre habitat : extensions, sur&eacute;l&eacute;vations, cr&eacute;ation de pi&egrave;ces suppl&eacute;mentaires.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://www.m3-construction.fr/content/galleries/sinistre1.jpg" alt="R&eacute;paration sinistre">
+        <div class="service-card-body">
+          <h3>R&eacute;paration sinistres</h3>
+          <p>Intervention rapide apr&egrave;s sinistres : b&acirc;chage d'urgence, &eacute;taiement, remise en &eacute;tat compl&egrave;te de votre bien.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-title">
+      <h2>Nos <span class="accent">r&eacute;alisations</span></h2>
+      <p>Un aper&ccedil;u de nos chantiers en Occitanie</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="https://www.m3-construction.fr/content/galleries/c1.jpg" alt="Restauration ch&acirc;teau charpente"></div>
+      <div class="gallery-item"><img src="https://www.m3-construction.fr/content/galleries/r2.jpg" alt="R&eacute;novation int&eacute;rieure"></div>
+      <div class="gallery-item"><img src="https://www.m3-construction.fr/modules/slideshow/images/1/slide-large.jpg" alt="Am&eacute;nagement piscine"></div>
+      <div class="gallery-item"><img src="https://www.m3-construction.fr/content/galleries/c2.jpg" alt="Couverture"></div>
+      <div class="gallery-item"><img src="https://www.m3-construction.fr/content/galleries/clerc%201ok.jpg" alt="Extension maison"></div>
+      <div class="gallery-item"><img src="https://www.m3-construction.fr/content/galleries/Bianchi%20(1).jpg" alt="R&eacute;paration apr&egrave;s sinistre"></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Un projet de travaux ?</h2>
+  <p>Contactez-nous pour un devis gratuit. Nous &eacute;tudions chaque demande et intervenons dans toute l'Occitanie.</p>
+  <a href="#contact" class="btn btn-white">Nous contacter</a>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contactez-<span class="accent">nous</span></h2>
+      <p>Devis gratuit sous 48h</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>M3 Construction</h3>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+          <div><h4>Adresse</h4><p>106 Avenue Tolosane<br>31520 Ramonville-Saint-Agne</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+          <div><h4>T&eacute;l&eacute;phone</h4><p><a href="tel:0561757575">05 61 75 75 75</a></p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+          <div><h4>Email</h4><p><a href="mailto:contact@m3-construction.fr">contact@m3-construction.fr</a></p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div>
+          <div><h4>Zone d'intervention</h4><p>Haute-Garonne &amp; Occitanie</p></div>
+        </div>
+      </div>
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5000!2d1.4739!3d43.5444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRamonville-Saint-Agne!5e0!3m2!1sfr!2sfr!4v1" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 M3 Construction &mdash; Tous corps d'&eacute;tat &agrave; Ramonville-Saint-Agne (31)</p>
+</footer>
+
+<script>
+const toggle=document.getElementById('menuToggle');
+const nav=document.getElementById('navLinks');
+toggle.addEventListener('click',()=>nav.classList.toggle('active'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('active')));
+</script>
+</body>
+</html>
